@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Graphic Designer Portfolio</title>
 
@@ -161,6 +162,42 @@
   background: #22d3ee;
   color: #020617;
   transform: translateY(-3px);
+}
+/* ☎️ Phones and small screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* one column on phones */
+  }
+
+  .image-card img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* 💻 Tablets and small laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
   </style>
